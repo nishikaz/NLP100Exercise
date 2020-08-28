@@ -14,7 +14,7 @@ cat $filename | wc -l
 # 11. タブをスペースに置換
 # タブ1文字につきスペース1文字に置換せよ．
 # 確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
-sed -E s/$'\t'/' '/g $filename > replaced-popular-names.txt
+sed -E s/$'\t'/' '/g $filename
 
 # 12. 1列目をcol1.txtに，2列目をcol2.txtに保存
 # 各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．
@@ -50,4 +50,17 @@ if [ $(($nAllLines % $Nsplit)) -gt 0 ]; then
 fi
 split -l $nLines $filename
 
+# 17. １列目の文字列の異なり
+# 1列目の文字列の種類（異なる文字列の集合）を求めよ．
+# 確認にはcut, sort, uniqコマンドを用いよ．
+cut -f 1 $filename | sort -f | uniq
 
+# 18. 各行を3コラム目の数値の降順にソート
+# 各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．
+# 確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．
+sort -k 3nr,3 -t '       ' popular-names.txt
+
+# 19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる
+# 各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．
+# 確認にはcut, uniq, sortコマンドを用いよ．
+cut -f 1 $filename | sort | uniq -c | sort -nr
