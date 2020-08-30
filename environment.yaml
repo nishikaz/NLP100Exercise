@@ -8,7 +8,7 @@ dependencies:
   - backcall=0.2.0=py_0
   - blas=1.0=mkl
   - bleach=3.1.5=py_0
-  - ca-certificates=2020.6.24=0
+  - ca-certificates=2020.7.22=0
   - certifi=2020.6.20=py38_0
   - cffi=1.14.1=py38hed5b41f_0
   - dbus=1.13.16=h18a8e69_0
@@ -54,6 +54,7 @@ dependencies:
   - numpy-base=1.19.1=py38hcfb5961_0
   - openssl=1.1.1g=h1de35cc_0
   - packaging=20.4=py_0
+  - pandas=1.1.1=py38hb1e8313_0
   - pandoc=2.10.1=0
   - pandocfilters=1.4.2=py38_1
   - parso=0.7.0=py_0
@@ -72,6 +73,7 @@ dependencies:
   - pyrsistent=0.16.0=py38h1de35cc_0
   - python=3.8.5=h26836e1_0
   - python-dateutil=2.8.1=py_0
+  - pytz=2020.1=py_0
   - pyzmq=19.0.1=py38hb1e8313_1
   - qt=5.9.7=h468cd18_1
   - qtconsole=4.7.5=py_0
